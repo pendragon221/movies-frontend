@@ -6,9 +6,7 @@ interface Props {
 
 const Photo = ({ url }: Props) => {
     return (
-            <div className='max-w-xl'>
-                <img src={url} alt='photo'></img>
-            </div>
+        <img src={url} alt='photo'></img>
     )
 }
 

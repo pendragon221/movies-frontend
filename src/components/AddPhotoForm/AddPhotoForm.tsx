@@ -6,8 +6,7 @@ const AddPhotoForm = ({ setPhotos }: any) => {
 
     const onSubmit = (e: any) => {
         e.preventDefault()
-        if (url)
-        {
+        if (url) {
             setPhotos((prev: any) => {
                 return [...prev, { url: url }]
             })
@@ -21,15 +20,15 @@ const AddPhotoForm = ({ setPhotos }: any) => {
 
     return (
         <form action="#" method="POST">
-            <div className='w-[36rem] flex gap-10 justify-start'>
+            <div className='flex gap-5 justify-start'>
                 <input type='text' name='photo_url'
                     placeholder='Enter link to a photo...'
                     onInput={onInput}
                     value={url}
-                    className='w-80 px-5 py-2 shadow-none border border-gray-300 rounded-xl transition-shadow focus:shadow-2xl' />
+                    className='w-80 px-5 py-2 shadow-none border rounded-full transition-shadow focus:shadow-2xl' />
                 <button type='submit'
                     onClick={onSubmit}
-                    className='py-2 px-4 transition-all border-2 border-gray-300 rounded-xl hover:border-green-300'>
+                    className='py-2 px-4 transition-all border-4 border-double border-green-500 rounded-full hover:border-green-600'>
                     Add photo
                 </button>
             </div>
